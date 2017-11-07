@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <a class="main-logo-a"><img src="main-logo-img" alt="Логотип Глэйси"></a>
+        <ul class="main-nav-ul">
+          <li>
+            <a href="catalog.html" class="main-nav-a">
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li>
+            <a href="delivery.html" class="main-nav-a">
+              <span>Доставка и оплата</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="main-nav-a">
+              <span>О компании</span>
+            </a>
+          </li>
+          <li>
+            <button type="button" class="main-nav-button button-search" value="Поиск">Поиск</button>
+          </li>
+          <li>
+            <button type="button" class="main-nav-button button-entrance" value="Вход">Вход</button>
+          </li>
+          <li>
+            <button type="button" class="main-nav-button button-cart" value="Корзина">Корзина</button>
+          </li>
+        </ul>
+        <div class="time-opened-and-phone">
+          <p class="time-opened">С 10 до 20, ежедневно</p>
+          <p class="phone">8 812 450-25-25</p>
+        </div>
+      </nav>
+      <nav class="catalog-path">
+        <ol class="catalog-path-ol">
+          <li><a href="index.html" class="catalog-path-a"><span>Главная</span></a></li>
+          <li><a href="catalog.html" class="catalog-path-a"><span>Каталог</span></a></li>
+          <li><a href="catalog.html?type=creame" class="catalog-path-a"><span>Сливочное</span></a></li>
+        </ol>
+      </nav>
+    </header>
+    <main class="main-contain">
+      <h1 class="visual-hidden">Каталог мороженого Глэйси</h1>
+      <h2>Сливочное мороженое</h2>
+      <div class="filter filter-sort">
+        <span class="filter-label">Сортировка:</span>
+        <select id="filter-sort" class="filter-select-sort">
+          <option value="по популярности">по популярности</option>
+          <option value="сначала недорогие">сначала недорогие</option>
+          <option value="сначала дорогие">сначала дорогие</option>
+          <option value="по жирности">по жирности</option>
+        </select>
+      </div>
+      <div class="filter filter-price">
+        <span class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</span>
+        <input id="filter-price" type="range" min="0" max="1000" step="50" value="100">
+      </div>
+      <div class="filter filter-richness">
+        <span class="filter-label">Жирность:</span>
+        <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
+        <label class="filter-text" for="filter-richness-0">0%</label>
+        <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10">
+        <label class="filter-text" for="filter-richness-below-10">до 10%</label>
+        <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
+        <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
+        <input id="filter-richness-above-30" type="radio" name="filter-richness" value="30">
+        <label class="filter-text" for="filter-richness-above-30">выше 30 %</label>
+      </div>
+      <div class="filter filter-fillers">
+        <span class="filter-label">Наполнители:</span>
+        <input id="filter-fillers-choco" type="checkbox" value="шоколадные">
+        <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
+        <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки">
+        <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
+        <input id="filter-fillers-fruit" type="checkbox" value="фрукты">
+        <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
+        <input id="filter-fillers-syrup" type="checkbox" value="сиропы">
+        <label class="filter-text" for="filter-fillers-syrup">сиропы</label>
+        <input id="filter-fillers-jam" type="checkbox" value="джемы">
+        <label class="filter-label" for="filter-fillers-jam">джемы</label>
+      </div>
+      <button type="submit" class="button filter-button" value="Применить">Применить</button>
+    </main>
+  </body>
+</html>
