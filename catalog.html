@@ -47,47 +47,106 @@
         </ol>
       </nav>
     </header>
-    <main class="main-contain">
+    <main class="catalog-contain">
       <h1 class="visual-hidden">Каталог мороженого Глэйси</h1>
       <h2>Сливочное мороженое</h2>
-      <div class="filter filter-sort">
-        <span class="filter-label">Сортировка:</span>
-        <select id="filter-sort" class="filter-select-sort">
-          <option value="по популярности">по популярности</option>
-          <option value="сначала недорогие">сначала недорогие</option>
-          <option value="сначала дорогие">сначала дорогие</option>
-          <option value="по жирности">по жирности</option>
-        </select>
-      </div>
-      <div class="filter filter-price">
-        <span class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</span>
-        <input id="filter-price" type="range" min="0" max="1000" step="50" value="100">
-      </div>
-      <div class="filter filter-richness">
-        <span class="filter-label">Жирность:</span>
-        <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
-        <label class="filter-text" for="filter-richness-0">0%</label>
-        <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10">
-        <label class="filter-text" for="filter-richness-below-10">до 10%</label>
-        <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
-        <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
-        <input id="filter-richness-above-30" type="radio" name="filter-richness" value="30">
-        <label class="filter-text" for="filter-richness-above-30">выше 30 %</label>
-      </div>
-      <div class="filter filter-fillers">
-        <span class="filter-label">Наполнители:</span>
-        <input id="filter-fillers-choco" type="checkbox" value="шоколадные">
-        <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
-        <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки">
-        <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
-        <input id="filter-fillers-fruit" type="checkbox" value="фрукты">
-        <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
-        <input id="filter-fillers-syrup" type="checkbox" value="сиропы">
-        <label class="filter-text" for="filter-fillers-syrup">сиропы</label>
-        <input id="filter-fillers-jam" type="checkbox" value="джемы">
-        <label class="filter-label" for="filter-fillers-jam">джемы</label>
-      </div>
-      <button type="submit" class="button filter-button" value="Применить">Применить</button>
+      <section class="catalog-filters">
+        <h2 class="visible-hidden">Фильтры для выбора</h2>
+        <div class="filter filter-sort">
+          <span class="filter-label">Сортировка:</span>
+          <select id="filter-sort" class="filter-select-sort">
+            <option value="по популярности">по популярности</option>
+            <option value="сначала недорогие">сначала недорогие</option>
+            <option value="сначала дорогие">сначала дорогие</option>
+            <option value="по жирности">по жирности</option>
+          </select>
+        </div>
+        <div class="filter filter-price">
+          <span class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</span>
+          <input id="filter-price" type="range" min="0" max="1000" step="50" value="100">
+        </div>
+        <div class="filter filter-richness">
+          <span class="filter-label">Жирность:</span>
+          <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
+          <label class="filter-text" for="filter-richness-0">0%</label>
+          <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10">
+          <label class="filter-text" for="filter-richness-below-10">до 10%</label>
+          <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
+          <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
+          <input id="filter-richness-above-30" type="radio" name="filter-richness" value="30">
+          <label class="filter-text" for="filter-richness-above-30">выше 30 %</label>
+        </div>
+        <div class="filter filter-fillers">
+          <span class="filter-label">Наполнители:</span>
+          <input id="filter-fillers-choco" type="checkbox" value="шоколадные">
+          <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
+          <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки">
+          <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
+          <input id="filter-fillers-fruit" type="checkbox" value="фрукты">
+          <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
+          <input id="filter-fillers-syrup" type="checkbox" value="сиропы">
+          <label class="filter-text" for="filter-fillers-syrup">сиропы</label>
+          <input id="filter-fillers-jam" type="checkbox" value="джемы">
+          <label class="filter-label" for="filter-fillers-jam">джемы</label>
+        </div>
+        <button type="submit" class="button filter-button" value="Применить">Применить</button>
+      </section>
+      <section class="catalog-contain">
+        <h2 class="visual-hidden">Мороженое с учетом примененных фильтров</h2>
+        <ul class="catalog-contain-ul">
+          <li>
+            <img src="creame-orange.png" class="catalog" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <span class="offer-price">310</span><span class="offer-unit">/кг</span>
+            <p class="offer-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          </li>
+          <li>
+            <img src="creame-coffee.png" class="offer-img" alt="Сливочно-кофейное с кусочками шоколада">
+            <span class="offer-price">380</span><span class="offer-unit">/кг</span>
+            <p class="offer-text">Сливочно-кофейное с кусочками шоколада</p>
+          </li>
+          <li>
+            <img src="creame-strawberry.png" class="offer-img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <span class="offer-price">355</span><span class="offer-unit">/кг</span>
+            <p class="offer-text">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          </li>
+          <li>
+            <img src="creame-caramel.png" class="offer-img" alt="Сливочное крем-брюле с карамельной подливкой">
+            <span class="offer-price">415</span><span class="offer-unit">/кг</span>
+            <p class="offer-text">Сливочное крем-брюле с карамельной подливкой</p>
+          </li>
+        </ul>
+        <nav class="catalog-paginator">
+          <ol class="catalog-paginator-ol">
+            <li class="selected"><a href="catalog.html?page=1">1</a></li>
+            <li><a href="catalog.html?page=2">2</a></li>
+            <li><a href="catalog.html?page=3">3</a></li>
+            <li><a href="catalog.html?page=4">4</a></li>
+            <li><a href="catalog.html?page=5">5</a></li>
+          </ol>
+        </nav>
+      </section>
     </main>
+    <footer class="main-footer">
+      <div class="socials">
+        <ul class="socials-ul">
+          <li><a href="twitter.com/gllacy" class="social-button social-tw"><span class="visual-hidden">Твиттер</span></a></li>
+          <li><a href="instagram.com/gllacy" class="social-button social-insta"><span class="visual-hidden">Инстаграм</span></a></li>
+          <li><a href="facebook.com/gllacy" class="social-button social-fb"><span class="visual-hidden">Фэйсбук</span></a></li>
+          <li><a href="vk.com/gllacy" class="social-button social-vk"><span class="visual-hidden">Вконтакте</span></a></li>
+        </ul>
+      </div>
+      <div class="documents">
+        <ul class="documents-ul">
+          <li><a href="suppliers.doc"><span>Для поставщиков</span></a></li>
+          <li><a href="juristicDocuments.doc"><span>Наши документы</span></a></li>
+          <li><a href="aboutProduce.doc"><span>О производстве</span></a></li>
+          <li><a href="ecological.doc"><span>Экологические стандарты</span></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <img src="logoAcademy.png" alt="Логотип HTML Academy">
+        <a href="http://htmlacademy.ru"><p class="copiright-text">Сделано в HTML Academy © 2017</p></a>
+      </div>
+    </footer>
   </body>
 </html>
