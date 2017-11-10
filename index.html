@@ -10,9 +10,24 @@
         <a class="main-logo-a"><img src="main-logo-img" alt="Логотип Глэйси"></a>
         <ul class="main-nav-ul">
           <li>
-            <a href="catalog.html" class="main-nav-a">
-              <span>Каталог</span>
-            </a>
+            <div class="header-catalog">
+              <div class="main-nav-button">
+                <a href="catalog.html" class="main-nav-a">
+                  <span>Каталог</span>
+                </a>
+              </div>
+              <div class="popup-catalog">
+                  <nav class="catalog-menu">
+                    <ul class="catalog-menu-ul">
+                      <li><a href="catalog.html?type=novelty"><b>Новинки</b></a></li>
+                      <li><a href="catalog.html?type=creame">Сливочное</a></li>
+                      <li><a href="catalog.html?type=sorbet">Щербеты</a></li>
+                      <li><a href="catalog.html?type=iceFruit">Фруктовый лед</a></li>
+                      <li><a href="catalog.html?type=melorin">Мелорин</a></li>
+                    </ul>
+                  </nav>
+              </div>
+            </div>
           </li>
           <li>
             <a href="delivery.html" class="main-nav-a">
@@ -24,21 +39,54 @@
               <span>О компании</span>
             </a>
           </li>
+        </ul>
+      </nav>
+      <div class="header-control">
+        <ul class="header-control-ul">
           <li>
             <button type="button" class="main-nav-button button-search" value="Поиск">Поиск</button>
+            <div class="popup">
+                <span>Строка для поиска</span>
+            </div>
           </li>
           <li>
             <button type="button" class="main-nav-button button-entrance" value="Вход">Вход</button>
+            <div class="popup">
+                <span>Место для формы</span><br>
+                <button type="button" class="button" value="Войти">Войти</button>
+                <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
+                <a href="newUser.html"><span>Новая регистрация</span></a>
+            </div>
           </li>
           <li>
             <button type="button" class="main-nav-button button-cart" value="Корзина">Корзина</button>
+            <div class="popup">
+                <table class="cart-table">
+                  <tr>
+                    <td><button type="button" class="cart-close" value="Удалить товар">Удалить товар</button></td>
+                    <td><img src="creame_orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td><span class="cart-weight">1,5 кг х</span><span class="cart-price"> 200 руб.</span></td>
+                    <td><span class="cart-weight-price">300 руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="cart-close" value="Удалить товар">Удалить товар</button></td>
+                    <td><img src="creame_orange.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td><span class="cart-weight">1,5 кг х</span><span class="cart-price"> 300 руб.</span></td>
+                    <td><span class="cart-weight-price">450 руб.</span></td>
+                  </tr>
+                </table>
+                <span class="cart-total-price">Итого: 750 руб.</span>
+                <button type="submit" class="button" value="Оформить заказ">Оформить заказ</button>
+            </div>
           </li>
         </ul>
-        <div class="time-opened-and-phone">
-          <p class="time-opened">С 10 до 20, ежедневно</p>
-          <p class="phone">8 812 450-25-25</p>
-        </div>
-      </nav>
+      </div>
+      <div class="time-opened-and-phone">
+        <p class="time-opened">С 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525" class="phone">8 812 450-25-25</a>
+      </div>
     </header>
     <main class="main-contain">
       <h1 class="visual-hidden">Студия мороженного Глэйси</h1>
@@ -46,20 +94,20 @@
         <h2 class="visual-hidden">Специальные предложения</h2>
         <img src="waffleCone.png" class="special-offer-img" alt="Крем-брюле и пломбир с малиновым джемом в вафельном рожке">
         <p class="special-offer-text">Крем-брюле и пломбир с малиновым джемом</p>
-        <nav class="special-offer-nav">
+        <button type="button" class="button" value="buy-both">Дайте оба!</button>
+        <div class="special-offer-carousel">
           <ol>
             <li>
-              <button type="button" class="special-nav-carousel-button" value="carousel-1">1</button>
+              <button type="button" class="special-offer-carousel-button" value="carousel-1">1</button>
             </li>
             <li>
-              <button type="button" class="special-nav-carousel-button" value="carousel-2">2</button>
+              <button type="button" class="special-offer-carousel-button" value="carousel-2">2</button>
             </li>
             <li>
-              <button type="button" class="special-nav-carousel-button" value="carousel-3">3</button>
+              <button type="button" class="special-offer-carousel-button" value="carousel-3">3</button>
             </li>
           </ol>
-        </nav>
-        <button type="button" class="button" value="buy-both">Дайте оба!</button>
+        </div>
       </section>
       <section class="bonus-offer">
         <h2 class="visual-hidden">Бонусы при покупке от 2-х килограммов</h2>
@@ -80,25 +128,25 @@
           <li>
             <span class="hit-offer-hit">Хит</span>
             <img src="creame-orange.png" class="offer-img" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <span class="offer-price">310</span><span class="offer-unit">/кг</span>
+            <p><span class="offer-price">310</span><span class="offer-unit">/кг</span></p>
             <p class="offer-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
           </li>
           <li>
             <span class="hit-offer-hit">Хит</span>
             <img src="creame-coffee.png" class="offer-img" alt="Сливочно-кофейное с кусочками шоколада">
-            <span class="offer-price">380</span><span class="offer-unit">/кг</span>
+            <p><span class="offer-price">380</span><span class="offer-unit">/кг</span></p>
             <p class="offer-text">Сливочно-кофейное с кусочками шоколада</p>
           </li>
           <li>
             <span class="hit-offer-hit">Хит</span>
             <img src="creame-strawberry.png" class="offer-img" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <span class="offer-price">355</span><span class="offer-unit">/кг</span>
+            <p><span class="offer-price">355</span><span class="offer-unit">/кг</span></p>
             <p class="offer-text">Сливочно-клубничное с присыпкой из белого шоколада</p>
           </li>
           <li>
             <span class="hit-offer-hit">Хит</span>
             <img src="creame-caramel.png" class="offer-img" alt="Сливочное крем-брюле с карамельной подливкой">
-            <span class="offer-price">415</span><span class="offer-unit">/кг</span>
+            <p><span class="offer-price">415</span><span class="offer-unit">/кг</span></p>
             <p class="offer-text">Сливочное крем-брюле с карамельной подливкой</p>
           </li>
         </ul>
@@ -107,23 +155,25 @@
         <h2 class="visual-hidden">Преимущества Глэйси</h2>
         <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
           <ul class="features">
-            <li><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
-            <li><p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p></li>
-            <li><p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p></li>
-            <li><p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p></li>
+            <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+            <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+            <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+            <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
           </ul>
       </section>
-      <article class="blog">
-        <h2 class="visual-hidden">Блог фабрики мороженого Глэйси</h2>
-        <p class="blog-header">Новое в нашем блоге</p>
-        <a href="blog.html"><p class="blog-text">10 способов сервировки фруктовых щербетов к столу</p></a>
-      </article>
-      <section class="subscribe">
-        <h2 class="visual-hidden">Подписка на рассылку</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <span>Место для формы</span>
-        <button type="submit" value="Отправить" class="button">Отправить</button>
-      </section>
+      <div class="blog-and-subscribe">
+        <article class="blog">
+          <h2 class="visual-hidden">Блог фабрики мороженого Глэйси</h2>
+          <p class="blog-header">Новое в нашем блоге</p>
+          <a href="blog.html"><p class="blog-text">10 способов сервировки фруктовых щербетов к столу</p></a>
+        </article>
+        <section class="subscribe">
+          <h2 class="visual-hidden">Подписка на рассылку</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <span>Место для формы</span>
+          <button type="submit" value="Отправить" class="button">Отправить</button>
+        </section>
+      </div>
       <section class="contacts-section">
         <h2>Контакты</h2>
         <img src="map.png" class="contacts-map-img" alt="Местоположение на карте">
@@ -160,30 +210,10 @@
         </ul>
       </div>
       <div class="copyright">
-        <img src="logoAcademy.png" alt="Логотип HTML Academy">
-        <a href="http://htmlacademy.ru"><p class="copiright-text">Сделано в HTML Academy © 2017</p></a>
+        <a href="http://htmlacademy.ru"><img src="logoAcademy.png" alt="Логотип HTML Academy"></a>
+        <p class="copiright-text">Сделано в <a href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
       </div>
     </footer>
-    <div class="modal modal-catalog">
-        <nav class="catalog-menu">
-          <ul class="catalog-menu-ul">
-            <li><a href="catalog.html?type=novelty"><b>Новинки</b></a></li>
-            <li><a href="catalog.html?type=creame">Сливочное</a></li>
-            <li><a href="catalog.html?type=sorbet">Щербеты</a></li>
-            <li><a href="catalog.html?type=iceFruit">Фруктовый лед</a></li>
-            <li><a href="catalog.html?type=melorin">Мелорин</a></li>
-          </ul>
-        </nav>
-    </div>
-    <div class="modal modal-entrance">
-        <span>Место для формы</span><br>
-        <button type="button" class="button" value="Войти">Войти</button>
-        <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
-        <a href="newUser.html"><span>Новая регистрация</span></a>
-    </div>
-    <div class="modal modal-search">
-        <span>Строка для поиска</span>
-    </div>
     <div class="modal modal-feedback">
         <span>Место для формы</span><br>
         <button type="button" class="button" value="Отправить">Отправить</button>

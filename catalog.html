@@ -7,12 +7,27 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-logo-a"><img src="main-logo-img" alt="Логотип Глэйси"></a>
+        <a href="index.html" class="main-logo-a"><img src="main-logo-img" alt="Логотип Глэйси"></a>
         <ul class="main-nav-ul">
           <li>
-            <a href="catalog.html" class="main-nav-a">
-              <span>Каталог</span>
-            </a>
+            <div class="header-catalog">
+              <div class="main-nav-button">
+                <a href="catalog.html" class="main-nav-a">
+                  <span>Каталог</span>
+                </a>
+              </div>
+              <div class="popup-catalog">
+                  <nav class="catalog-menu">
+                    <ul class="catalog-menu-ul">
+                      <li><a href="catalog.html?type=novelty"><b>Новинки</b></a></li>
+                      <li><a href="catalog.html?type=creame">Сливочное</a></li>
+                      <li><a href="catalog.html?type=sorbet">Щербеты</a></li>
+                      <li><a href="catalog.html?type=iceFruit">Фруктовый лед</a></li>
+                      <li><a href="catalog.html?type=melorin">Мелорин</a></li>
+                    </ul>
+                  </nav>
+              </div>
+            </div>
           </li>
           <li>
             <a href="delivery.html" class="main-nav-a">
@@ -24,38 +39,63 @@
               <span>О компании</span>
             </a>
           </li>
+        </ul>
+      </nav>
+      <div class="header-control">
+        <ul class="header-control-ul">
           <li>
             <button type="button" class="main-nav-button button-search" value="Поиск">Поиск</button>
+            <div class="popup">
+                <span>Строка для поиска</span>
+            </div>
           </li>
           <li>
             <button type="button" class="main-nav-button button-entrance" value="Вход">Вход</button>
+            <div class="popup">
+                <span>Место для формы</span><br>
+                <button type="button" class="button" value="Войти">Войти</button>
+                <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
+                <a href="newUser.html"><span>Новая регистрация</span></a>
+            </div>
           </li>
           <li>
             <button type="button" class="main-nav-button button-cart" value="Корзина">Корзина</button>
+            <div class="popup">
+                <table class="cart-table">
+                  <tr>
+                    <td><button type="button" class="cart-close" value="Удалить товар">Удалить товар</button></td>
+                    <td><img src="creame_orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td><span class="cart-weight">1,5 кг х</span><span class="cart-price"> 200 руб.</span></td>
+                    <td><span class="cart-weight-price">300 руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button" class="cart-close" value="Удалить товар">Удалить товар</button></td>
+                    <td><img src="creame_orange.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td><span class="cart-weight">1,5 кг х</span><span class="cart-price"> 300 руб.</span></td>
+                    <td><span class="cart-weight-price">450 руб.</span></td>
+                  </tr>
+                </table>
+                <span class="cart-total-price">Итого: 750 руб.</span>
+                <button type="submit" class="button" value="Оформить заказ">Оформить заказ</button>
+            </div>
           </li>
         </ul>
-        <div class="time-opened-and-phone">
-          <p class="time-opened">С 10 до 20, ежедневно</p>
-          <p class="phone">8 812 450-25-25</p>
-        </div>
-      </nav>
-      <nav class="catalog-path">
-        <ol class="catalog-path-ol">
-          <li><a href="index.html" class="catalog-path-a"><span>Главная</span></a></li>
-          <li><a href="catalog.html" class="catalog-path-a"><span>Каталог</span></a></li>
-          <li><a href="catalog.html?type=creame" class="catalog-path-a"><span>Сливочное</span></a></li>
-        </ol>
-      </nav>
+      </div>
+      <div class="time-opened-and-phone">
+        <p class="time-opened">С 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525" class="phone">8 812 450-25-25</a>
+      </div>
     </header>
     <main class="catalog-contain">
-      <h1 class="visual-hidden">Каталог мороженого Глэйси</h1>
-      <h2>Сливочное мороженое</h2>
+      <h1>Сливочное мороженое</h1>
       <section class="catalog-filters">
         <h2 class="visible-hidden">Фильтры для выбора</h2>
         <div class="filter filter-sort">
           <span class="filter-label">Сортировка:</span>
           <select id="filter-sort" class="filter-select-sort">
-            <option value="по популярности">по популярности</option>
+            <option value="по популярности" selected>по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>
             <option value="по жирности">по жирности</option>
@@ -69,7 +109,7 @@
           <span class="filter-label">Жирность:</span>
           <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
           <label class="filter-text" for="filter-richness-0">0%</label>
-          <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10">
+          <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10" checked>
           <label class="filter-text" for="filter-richness-below-10">до 10%</label>
           <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
           <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
@@ -80,7 +120,7 @@
           <span class="filter-label">Наполнители:</span>
           <input id="filter-fillers-choco" type="checkbox" value="шоколадные">
           <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
-          <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки">
+          <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки" checked>
           <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
           <input id="filter-fillers-fruit" type="checkbox" value="фрукты">
           <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
