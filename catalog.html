@@ -31,15 +31,19 @@
         <li>
           <button type="button" class="main-nav-button button-search" value="Поиск" >Поиск</button>
           <div class="popup">
-              <span>Строка для поиска</span>
+            <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
+              <input type="text" name="search-form-email" placeholder="Что ищем?">
+            </form>
           </div>
         </li>
         <li>
           <button type="button" class="main-nav-button button-entrance" value="Вход" >Вход</button>
           <div class="popup">
-            <form name="">
-              <button type="button" class="button" value="Войти">Войти</button>
-            </form="">
+            <form action="https://echo.htmlacademy.ru" method="get" name="entrance-form">
+              <input type="email" name="entrance-form-email" placeholder="Электронная почта">
+              <input type="password" name="entrance-form-password" placeholder="Пароль">
+              <button type="submit" class="button" value="Войти">Войти</button>
+            </form>
               <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
               <a href="newUser.html"><span>Новая регистрация</span></a>
           </div>
@@ -76,45 +80,47 @@
     <main class="catalog-contain">
       <h1>Сливочное мороженое</h1>
       <section class="catalog-filters">
-        <h2 class="visually-hidden">Фильтры для выбора</h2>
-        <div class="filter filter-sort">
-          <span class="filter-label">Сортировка:</span>
-          <select id="filter-sort" class="filter-select-sort">
-            <option value="по популярности" selected>по популярности</option>
-            <option value="сначала недорогие">сначала недорогие</option>
-            <option value="сначала дорогие">сначала дорогие</option>
-            <option value="по жирности">по жирности</option>
-          </select>
-        </div>
-        <div class="filter filter-price">
-          <span class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</span>
-          <input id="filter-price" type="range" min="0" max="1000" step="50" value="100">
-        </div>
-        <div class="filter filter-richness">
-          <span class="filter-label">Жирность:</span>
-          <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
-          <label class="filter-text" for="filter-richness-0">0%</label>
-          <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10" checked>
-          <label class="filter-text" for="filter-richness-below-10">до 10%</label>
-          <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
-          <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
-          <input id="filter-richness-above-30" type="radio" name="filter-richness" value="30">
-          <label class="filter-text" for="filter-richness-above-30">выше 30 %</label>
-        </div>
-        <div class="filter filter-fillers">
-          <span class="filter-label">Наполнители:</span>
-          <input id="filter-fillers-choco" type="checkbox" value="шоколадные">
-          <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
-          <input id="filter-fillers-sugar-powder" type="checkbox" value="сахарные присыпки" checked>
-          <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
-          <input id="filter-fillers-fruit" type="checkbox" value="фрукты">
-          <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
-          <input id="filter-fillers-syrup" type="checkbox" value="сиропы">
-          <label class="filter-text" for="filter-fillers-syrup">сиропы</label>
-          <input id="filter-fillers-jam" type="checkbox" value="джемы">
-          <label class="filter-label" for="filter-fillers-jam">джемы</label>
-        </div>
-        <button type="submit" class="button filter-button" value="Применить">Применить</button>
+        <form action="https://echo.htmlacademy.ru" method="get" name="catalog-filter-form">
+          <h2 class="visually-hidden">Фильтры для выбора</h2>
+          <fieldset  class="filter filter-sort">
+            <legend class="filter-label">Сортировка:</legend>
+            <select id="filter-sort" name="catalog-filter-form-sort" class="filter-select-sort">
+              <option value="по популярности" selected>по популярности</option>
+              <option value="сначала недорогие">сначала недорогие</option>
+              <option value="сначала дорогие">сначала дорогие</option>
+              <option value="по жирности">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset  class="filter filter-price">
+            <legend class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</legend>
+            <input id="filter-price" name="catalog-filter-price" type="range" min="0" max="1000" step="50" value="100">
+          </fieldset>
+          <fieldset  class="filter filter-richness">
+            <legend class="filter-label">Жирность:</legend>
+            <input id="filter-richness-0" type="radio" name="filter-richness" value="0">
+            <label class="filter-text" for="filter-richness-0">0%</label>
+            <input id="filter-richness-below-10" type="radio" name="filter-richness" value="10" checked>
+            <label class="filter-text" for="filter-richness-below-10">до 10%</label>
+            <input id="filter-richness-below-30" type="radio" name="filter-richness" value="20">
+            <label class="filter-text" for="filter-richness-below-30">до 30 %</label>
+            <input id="filter-richness-above-30" type="radio" name="filter-richness" value="30">
+            <label class="filter-text" for="filter-richness-above-30">выше 30 %</label>
+          </fieldset>
+          <fieldset class="filter filter-fillers">
+            <legend class="filter-label">Наполнители:</legend>
+            <input id="filter-fillers-choco" name="catalog-filter-choco" type="checkbox" value="шоколадные">
+            <label class="filter-text" for="filter-fillers-choco">шоколадные</label>
+            <input id="filter-fillers-sugar-powder" name="catalog-filter-sugar-powder" type="checkbox" value="сахарные присыпки" checked>
+            <label class="filter-text" for="filter-fillers-sugar-powder">сахарные присыпки</label>
+            <input id="filter-fillers-fruit" name="catalog-filter-fruit" type="checkbox" value="фрукты">
+            <label class="filter-text" for="filter-fillers-fruit">фрукты</label>
+            <input id="filter-fillers-syrup" name="catalog-filter-syrup" type="checkbox" value="сиропы">
+            <label class="filter-text" for="filter-fillers-syrup">сиропы</label>
+            <input id="filter-fillers-jam" name="catalog-filter-jam" type="checkbox" value="джемы">
+            <label class="filter-label" for="filter-fillers-jam">джемы</label>
+          </fieldset>
+          <button type="submit" class="button filter-button" value="Применить">Применить</button>
+        </form>
       </section>
       <section class="catalog-contain">
         <h2 class="visual-hidden">Мороженое с учетом примененных фильтров</h2>

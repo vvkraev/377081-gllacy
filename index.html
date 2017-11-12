@@ -31,14 +31,19 @@
         <li>
           <button type="button" class="main-nav-button button-search" value="Поиск" >Поиск</button>
           <div class="popup">
-              <span>Строка для поиска</span>
+            <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
+              <input type="text" name="search-form-email" placeholder="Что ищем?">
+            </form>
           </div>
         </li>
         <li>
           <button type="button" class="main-nav-button button-entrance" value="Вход" >Вход</button>
           <div class="popup">
-              <span>Место для формы</span><br>
-              <button type="button" class="button" value="Войти">Войти</button>
+            <form action="https://echo.htmlacademy.ru" method="get" name="entrance-form">
+              <input type="email" name="entrance-form-email" placeholder="Электронная почта">
+              <input type="password" name="entrance-form-password" placeholder="Пароль">
+              <button type="submit" class="button" value="Войти">Войти</button>
+            </form>
               <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
               <a href="newUser.html"><span>Новая регистрация</span></a>
           </div>
@@ -140,8 +145,10 @@
         <section class="subscribe" >
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <span>Место для формы</span>
-          <button type="submit" value="Отправить" class="button">Отправить</button>
+          <form action="https://echo.htmlacademy.ru" method="get" name="subscribe-form">
+            <input type="email" name="subscribe-form-email" placeholder="Электронная почта">
+            <button type="submit" value="Отправить" class="button">Отправить</button>
+          </form>
         </section>
       </div>
       <section class="contacts-section">
@@ -182,8 +189,13 @@
       </div>
     </footer>
     <div class="modal modal-feedback">
-        <span>Место для формы</span><br>
-        <button type="button" class="button" value="Отправить">Отправить</button>
+        <form action="https://echo.htmlacademy.ru" method="get" name="feedback-form">
+          <input type="text" name="feedback-form-name" placeholder="Как вас зовут?">
+          <input type="email" name="feedback-form-email" placeholder="Ваша почта для ответа?">
+          <textarea name="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
+          <button type="button" class="submit" value="Отправить">Отправить</button>
+        </form>
+
     </div>
   </body>
 </html>
