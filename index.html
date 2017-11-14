@@ -32,7 +32,8 @@
           <button type="button" class="main-nav-button button-search" value="Поиск" >Поиск</button>
           <div class="popup">
             <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
-              <input type="text" name="search-form-email" placeholder="Что ищем?">
+              <label class="visually-hidden" for="search-form-email">Строка для поиска</label>
+              <input id="search-form-email" type="text" name="search-form-email" placeholder="Что ищем?">
             </form>
           </div>
         </li>
@@ -40,12 +41,14 @@
           <button type="button" class="main-nav-button button-entrance" value="Вход" >Вход</button>
           <div class="popup">
             <form action="https://echo.htmlacademy.ru" method="get" name="entrance-form">
-              <input type="email" name="entrance-form-email" placeholder="Электронная почта">
-              <input type="password" name="entrance-form-password" placeholder="Пароль">
+              <label class="visually-hidden" for="entrance-form-email">Электронная почта</label>
+              <input id="entrance-form-email" type="email" name="entrance-form-email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="entrance-form-password">Пароль</label>
+              <input id="entrance-form-password" type="password" name="entrance-form-password" placeholder="Пароль">
               <button type="submit" class="button" value="Войти">Войти</button>
+              <a href="forgottenPassword.html">Забыли пароль?</a><br>
+              <a href="newUser.html">Новая регистрация</a>
             </form>
-              <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
-              <a href="newUser.html"><span>Новая регистрация</span></a>
           </div>
         </li>
         <li>
@@ -62,25 +65,25 @@
       <div class="special-offer">
         <div class="special-offer-contain">
           <p class="special-offer-text">Крем-брюле и пломбир с малиновым джемом</p>
-          <button type="button" class="button" value="creme-brulee-and-plombier-with-raspberry-jam">Давайте оба!</button>
+          <a href="product.html?id=100" class="button">Давайте оба!</a>
         </div>
         <div class="special-offer-contain">
           <p class="special-offer-text">Шоколадный пломбир и лимонный сорбет</p>
-          <button type="button" class="button" value="choco-plombier-and-lemon-sorbet">Давайте оба!</button>
+          <a href="product.html?id=200" class="button">Давайте оба!</a>
         </div>
         <div class="special-offer-contain">
           <p class="special-offer-text">Пломбир с помадкой и клубничный щербет</p>
-          <button type="button" class="button" value="plombier-with-fondant-and-strawberry-sorbet">Давайте оба!</button>
+          <a href="product.html?id=300" class="button">Давайте оба!</a>
         </div>
         <ul class="special-offer-carousel">
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-1">1</button>
+            <button type="button" class="special-offer-carousel-button" value="carousel-1">Страница слайдера №1</button>
           </li>
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-2">2</button>
+            <button type="button" class="special-offer-carousel-button" value="carousel-2">Страница слайдера №2</button>
           </li>
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-3">3</button>
+            <button type="button" class="special-offer-carousel-button" value="carousel-3">Страница слайдера №3</button>
           </li>
         </ul>
       </div>
@@ -89,12 +92,12 @@
         <div class="bonus-raspberry"  >
           <p class="bonus-offer-header">Малинка даром!</p>
           <p class="bonus-offer-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <button type="button" class="button" value="Хочу варенье!">Хочу варенье!</button>
+          <a href="bonus_offer.html?id=1" class="button">Хочу варенье!</a>
         </div>
         <div class="bonus-choco"  >
           <p class="bonus-offer-header">Шоколадки даром!</p>
           <p class="bonus-offer-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <button type="button" class="button" value="Хочу шоколадки!">Хочу шоколадки!</button>
+          <a href="bonus_offer.html?id=2" class="button">Хочу шоколадки!</a>
         </div>
       </section>
       <section class="hit-offer">
@@ -146,7 +149,8 @@
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="https://echo.htmlacademy.ru" method="get" name="subscribe-form">
-            <input type="email" name="subscribe-form-email" placeholder="Электронная почта">
+            <label class="visually-hidden" for="subscribe-form-email">Электронная почта</label>
+            <input id="subscribe-form-email" type="email" name="subscribe-form-email" placeholder="Электронная почта">
             <button type="submit" value="Отправить" class="button">Отправить</button>
           </form>
         </section>
@@ -190,9 +194,12 @@
     </footer>
     <div class="modal modal-feedback">
         <form action="https://echo.htmlacademy.ru" method="get" name="feedback-form">
-          <input type="text" name="feedback-form-name" placeholder="Как вас зовут?">
-          <input type="email" name="feedback-form-email" placeholder="Ваша почта для ответа?">
-          <textarea name="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
+          <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+          <input id="feedback-form-name" type="text" name="feedback-form-name" placeholder="Как вас зовут?">
+          <label class="visually-hidden" for="feedback-form-email">Электронная почта</label>
+          <input id="feedback-form-email" type="email" name="feedback-form-email" placeholder="Ваша почта для ответа?">
+          <label class="visually-hidden" for="feedback-form-text">Напишите что-нибудь</label>
+          <textarea id="feedback-form-text" name="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
           <button type="button" class="submit" value="Отправить">Отправить</button>
         </form>
 

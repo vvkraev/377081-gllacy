@@ -32,7 +32,8 @@
           <button type="button" class="main-nav-button button-search" value="Поиск" >Поиск</button>
           <div class="popup">
             <form action="https://echo.htmlacademy.ru" method="get" name="search-form">
-              <input type="text" name="search-form-email" placeholder="Что ищем?">
+              <label class="visually-hidden" for="search-form-email">Строка для поиска</label>
+              <input id="search-form-email" type="text" name="search-form-email" placeholder="Что ищем?">
             </form>
           </div>
         </li>
@@ -40,12 +41,14 @@
           <button type="button" class="main-nav-button button-entrance" value="Вход" >Вход</button>
           <div class="popup">
             <form action="https://echo.htmlacademy.ru" method="get" name="entrance-form">
-              <input type="email" name="entrance-form-email" placeholder="Электронная почта">
-              <input type="password" name="entrance-form-password" placeholder="Пароль">
+              <label class="visually-hidden" for="entrance-form-email">Электронная почта</label>
+              <input id="entrance-form-email" type="email" name="entrance-form-email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="entrance-form-password">Пароль</label>
+              <input id="entrance-form-password" type="password" name="entrance-form-password" placeholder="Пароль">
               <button type="submit" class="button" value="Войти">Войти</button>
+              <a href="forgottenPassword.html">Забыли пароль?</a><br>
+              <a href="newUser.html">Новая регистрация</a>
             </form>
-              <a href="forgottenPassword.html"><span>Забыли пароль?</span></a><br>
-              <a href="newUser.html"><span>Новая регистрация</span></a>
           </div>
         </li>
         <li>
@@ -80,8 +83,8 @@
     <main class="catalog-contain">
       <h1>Сливочное мороженое</h1>
       <section class="catalog-filters">
+        <h2 class="visually-hidden">Фильтры для выбора</h2>
         <form action="https://echo.htmlacademy.ru" method="get" name="catalog-filter-form">
-          <h2 class="visually-hidden">Фильтры для выбора</h2>
           <fieldset  class="filter filter-sort">
             <legend class="filter-label">Сортировка:</legend>
             <select id="filter-sort" name="catalog-filter-form-sort" class="filter-select-sort">
@@ -93,7 +96,8 @@
           </fieldset>
           <fieldset  class="filter filter-price">
             <legend class="filter-label">Цена <span id="lowerPriceLimit">100</span> руб. - <span id="highPriceLimit">500</span> руб.</legend>
-            <input id="filter-price" name="catalog-filter-price" type="range" min="0" max="1000" step="50" value="100">
+            <label class="visually-hidden" for="catalog-filter-price">Слайдер для ограничения товара по цене</label>
+            <input id="catalog-filter-price" name="catalog-filter-price" type="range" min="0" max="1000" step="50" value="100">
           </fieldset>
           <fieldset  class="filter filter-richness">
             <legend class="filter-label">Жирность:</legend>
