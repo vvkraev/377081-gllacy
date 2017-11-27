@@ -265,8 +265,8 @@ a{
 
 .offer-text{
   line-height: 22px;
-
-  font-size: 16px
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .advantages{
@@ -385,4 +385,70 @@ font-weight: 800;
   line-height: 18px;
   font-size: 12px;
   color: white;
+}
+
+.breadcrumb{
+  list-style: none;
+}
+
+  .breadcrumb a{
+  line-height: 14px;
+  font-size: 16px;
+  color: white;
+}
+
+.catalog-contain h1{
+  line-height: 41px;
+  font-size: 35px;
+  font-weight: 800;
+  color: white;
+}
+
+.catalog-filter-form{
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.filter-label{
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.filter-select-sort{
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+
+  background: transparent;
+}
+
+.catalog-contain ul{
+  list-style: none;
+}
+
+.catalog-paginator{
+  list-style: none;
+}
+
+.catalog-paginator a{
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.catalog-paginator .selected{
+  width: 27px;
+  height: 27px;
+
+  background-color: white;
+  color: black;
+
+  border-radius: 50%;
+}
+
+.catalog-paginator .selected a{
+  color: black;
 }
