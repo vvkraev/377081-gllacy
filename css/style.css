@@ -14,25 +14,8 @@ body{
   background-repeat: no-repeat;
 }
 
-p{
-  margin: 0;
-}
-
 a{
   text-decoration: none;
-}
-
-button {
-  padding: 0;
-  margin: 0;
-
-  font: inherit;
-
-  text-align: center;
-  vertical-align: middle;
-
-  background-color: #000000;
-  border: none;
 }
 
 .visually-hidden {
@@ -45,11 +28,21 @@ button {
 
 
 .button {
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #F06340;
+  border: none;
+
   background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  position: absolute;
 }
 
 .main-nav a{
@@ -92,7 +85,8 @@ button {
 .button-search{
   width: 35px;
 
-  background-image: url("../img/magnifier.svg");
+  background-color: transparent;
+  background-image: url("../img/svg-gllacy/loupe.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -107,6 +101,7 @@ button {
   padding-left: 45px;
   padding-right: 16px;
 
+  background-color: transparent;
   background-image: url("../img/entrance.svg");
   background-position: 16px center;
   background-repeat: no-repeat;
@@ -121,6 +116,7 @@ button {
   padding-left: 45px;
   padding-right: 16px;
 
+  background-color: transparent;
   background-position: 16px center;
   background-repeat: no-repeat;
 }
