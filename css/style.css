@@ -10,6 +10,7 @@ body{
 
   background-color: #849d8f;
   background-image: url("../img/waffleCone_1.png");
+  background-color: #849d8f;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -46,16 +47,15 @@ a{
 }
 
 .main-nav a{
+  line-height: 18px;
   font-size: 16px;
   color: white;
-}
 
-.main-nav a{
   outline: none;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
+.main-nav-li>a:hover,
+.main-nav-li>a:focus {
   padding: 9px 14px;
 
   border-radius: 20px;
@@ -76,8 +76,12 @@ a{
 .main-nav-button{
   height: 35px;
 
-  font-weight: 500;
+  line-height: 16px;
 
+  font-weight: 500;
+  font-size: 14px;
+
+  color: white;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
@@ -158,6 +162,10 @@ a{
   color: white;
 }
 
+.special-offer-contain.hidden{
+  display: none;
+}
+
 .special-offer-contain a{
 
     padding: 19px 42px;
@@ -185,12 +193,31 @@ a{
   font-weight: bold;
 }
 
+.special-offer-carousel{
+  list-style: none;
+}
+
+.special-offer-carousel-button{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.special-offer-carousel-button.selected{
+  background-color: white;
+}
+
+
 .bonus-raspberry{
 
   width: 560px;
-  height: 230px;
+  min-height: 230px;
 
   background-image: url("../img/special_offer_raspberry.jpg");
+  background-color: #651526;
   background-repeat: no-repeat;
 
   border-radius: 10px;
@@ -199,9 +226,10 @@ a{
 .bonus-choco{
 
   width: 560px;
-  height: 230px;
+  min-height: 230px;
 
   background-image: url("../img/special_offer_choco_filler.jpg");
+  background-color: #3f2519;
   background-repeat: no-repeat;
 
   border-radius: 10px;
@@ -251,6 +279,10 @@ a{
   color: white;
 }
 
+.hit-offer-ul{
+  list-style: none;
+}
+
 .ruble-img{
   vertical-align: text-bottom;
 }
@@ -272,11 +304,12 @@ a{
 .advantages{
 
   width: 1146px;
-  height: 308px;
+  min-height: 308px;
 
   color: #323232;
 
   background-image: url("../img/seo_waffle_background.jpg");
+  background-color: #eaddc1;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -298,12 +331,18 @@ a{
   font-size: 16px;
 }
 
+.features li{
+  line-height: 22px;
+
+}
+
 .blog{
 
   width: 560px;
-  height: 220px;
+  min-height: 220px;
 
   background-image: url("../img/blog_strawberry.jpg");
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -322,20 +361,46 @@ a{
   color: #323232;
 }
 
+.blog-header{
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.blog-text{
+    border-bottom: 2px solid #323232;
+}
+
 .subscribe{
+  display: flex;
 
   width: 560px;
-  height: 220px;
+  min-height: 220px;
 
   background-image: url("../img/subscribe_postcard_border.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center;
 
   border-radius: 15px;
 
   line-height: 22px;
   font-size: 16px;
-  color: #323232;
+  color: #5a5a5a;
+}
+
+.subscribe_postcard_border{
+  margin-left: 6px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #f8f7f4;
+
+  border-radius: 12px;
+}
+
+.subscribe_postcard_border .button{
+  color: white;
 }
 
 .contacts-div{
@@ -351,8 +416,8 @@ font-size: 18px;
 font-weight: 800;
 }
 
-.contacts-div .phone a{
-  line-height: 24px;
+.contacts-div a{
+  line-height: 22px;
   font-size: 18px;
   font-weight: 800;
   color: #323232;
@@ -377,25 +442,46 @@ font-weight: 800;
   color: white;
 }
 
-.main-footer a b{
+.main-footer b{
   font-weight: 800;
 }
 
 .copyright{
   line-height: 18px;
   font-size: 12px;
-  color: white;
+  color: #fefefe;
+}
+
+.copyright a{
+  line-height: 18px;
+  font-size: 12px;
+  color: #fefefe;
+}
+
+.copiright-html-academy{
+  line-height: 18px;
+  font-size: 12px;
+  color: #fefefe;
+
+  border-bottom: 1px solid #fefefe;
 }
 
 .breadcrumb{
   list-style: none;
 }
 
-  .breadcrumb a{
+.breadcrumb a{
   line-height: 14px;
   font-size: 16px;
   color: white;
+
+  border-bottom: 1px solid white;
 }
+
+.current-breadcrumb a{
+  border-bottom: none;
+}
+
 
 .catalog-contain h1{
   line-height: 41px;

@@ -12,7 +12,7 @@
       <a class="main-logo-a"><img src="img/logo_gllacy.svg" alt="Логотип Глэйси" width="154" height="64"></a>
       <nav class="main-nav">
         <ul class="main-nav-ul">
-          <li>
+          <li class="main-nav-li">
             <a href="catalog.html" class="main-nav-a">Каталог</a>
             <ul class="catalog-menu-ul">
               <li><a href="catalog.html?type=novelty"><b>Новинки</b></a></li>
@@ -22,10 +22,10 @@
               <li><a href="catalog.html?type=melorin">Мелорин</a></li>
             </ul>
           </li>
-          <li>
+          <li  class="main-nav-li">
             <a href="delivery.html" class="main-nav-a">Доставка и оплата</a>
           </li>
-          <li>
+          <li  class="main-nav-li">
             <a href="about.html" class="main-nav-a">О компании</a>
           </li>
         </ul>
@@ -70,23 +70,23 @@
           <p class="special-offer-text">Крем-брюле и пломбир с малиновым джемом</p>
           <a href="product.html?id=100" class="button">Давайте оба!</a>
         </div>
-        <div class="special-offer-contain">
+        <div class="special-offer-contain hidden">
           <p class="special-offer-text">Шоколадный пломбир и лимонный сорбет</p>
           <a href="product.html?id=200" class="button">Давайте оба!</a>
         </div>
-        <div class="special-offer-contain">
+        <div class="special-offer-contain hidden">
           <p class="special-offer-text">Пломбир с помадкой и клубничный щербет</p>
           <a href="product.html?id=300" class="button">Давайте оба!</a>
         </div>
         <ul class="special-offer-carousel">
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-1">Страница слайдера №1</button>
+            <button type="button" class="special-offer-carousel-button selected" value="carousel-1"><span class="visually-hidden">Страница слайдера №1</span></button>
           </li>
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-2">Страница слайдера №2</button>
+            <button type="button" class="special-offer-carousel-button" value="carousel-2"><span class="visually-hidden">Страница слайдера №2</span></button>
           </li>
           <li>
-            <button type="button" class="special-offer-carousel-button" value="carousel-3">Страница слайдера №3</button>
+            <button type="button" class="special-offer-carousel-button" value="carousel-3"><span class="visually-hidden">Страница слайдера №3</span></button>
           </li>
         </ul>
       </div>
@@ -146,16 +146,18 @@
         <article class="blog" >
           <h2 class="visually-hidden">Блог фабрики мороженого Глэйси</h2>
           <p class="blog-header">Новое в нашем блоге</p>
-          <a href="blog.html"><p class="blog-text">10 способов сервировки фруктовых щербетов к столу</p></a>
+          <a href="blog.html"><span class="blog-text">10 способов сервировки фруктовых щербетов к столу</span></a>
         </article>
         <section class="subscribe" >
-          <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="https://echo.htmlacademy.ru" method="get" name="subscribe-form">
-            <label class="visually-hidden" for="subscribe-form-email">Электронная почта</label>
-            <input id="subscribe-form-email" type="email" name="subscribe-form-email" placeholder="Электронная почта">
-            <button type="submit" value="Отправить" class="button">Отправить</button>
-          </form>
+          <div class="subscribe_postcard_border">
+            <h2 class="visually-hidden">Подписка на рассылку</h2>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form action="https://echo.htmlacademy.ru" method="get" name="subscribe-form">
+              <label class="visually-hidden" for="subscribe-form-email">Электронная почта</label>
+              <input id="subscribe-form-email" type="email" name="subscribe-form-email" placeholder="Электронная почта">
+              <button type="submit" value="Отправить" class="button">Отправить</button>
+            </form>
+          </div>
         </section>
       </div>
       <section class="contacts-section">
@@ -192,7 +194,7 @@
       </ul>
       <div class="copyright">
         <a href="http://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" alt="Логотип HTML Academy" width="108" height="39"></a>
-        <p class="copiright-text">Сделано в <a href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
+        <p class="copiright-text">Сделано в <a href="http://htmlacademy.ru"><span class="copiright-html-academy">HTML Academy</span></a> © 2017</p>
       </div>
     </footer>
     <div class="modal modal-feedback">
